@@ -49,8 +49,12 @@ function run() {
         idx = 0;
     }
 
-    imgs.style.transform = `translateX(${-idx * 500}px)`;
+    imgs.style.transform = `translateX(${-idx * 700}px)`;
 
 }
 
 setInterval(run, 6000);
+
+//weld funcionality
+const main = document.querySelector('.main')
+document.querySelector('.logo-bottom').addEventListener('click', () => main.style.color == 'orange' ? main.style.color = 'aliceblue' : main.style.color = 'orange')

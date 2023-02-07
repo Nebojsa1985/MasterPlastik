@@ -21,6 +21,7 @@ body {
     gap: 30px;
     flex-direction: row;
     color: aliceblue;
+    font-size: large;
 }
 
 .logo {
@@ -51,44 +52,26 @@ body {
     border-bottom: 3px rgb(227, 149, 6) solid;
 }
 
-.about-container {
-    background-color:  rgb(126, 84, 6);
-    width: 100vw;
-    height: 50px;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 30vw;
-    position: fixed;
-    bottom: 1px;
-    cursor: pointer;
-}
-
-.about-container:hover {
-    background-color: rgb(227, 149, 6);
-}
-
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 20px 50px 0 80px;
+    padding: 20px 50px 0 50px;
+    color: aliceblue;
 }
 
 .content {
     background-color: black;
     height: 500px;
-    width: 70vw;
+    width: 60vw;
     float: left;
     display: flex;   
     align-items: center;
     gap: 30px;
     flex-direction: column;
-    color: aliceblue;
+    margin-right: 20px;
+    font-size: x-large;
 }
 
 .content-home {
@@ -120,25 +103,47 @@ body {
 .carousel {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    height: 500px;
-    width: 29vw;
+    height: 700px;
+    max-width: 700px;
+    width: 40vw;
     float: right;
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 .image-container {
     display: flex;
     transition: transform 0.3 linear;
-    transform: translateX(0);
+    transform: translateX(0); 
 }
 
 .image-container > img {
     object-fit: cover;
-    height: 500px;
-    width: 500px;
+    height: 700px;
+    width: 700px;
+}
+.logo-bottom {
+    cursor: pointer;
 }
 
+.about-container {
+    background-color:  rgb(126, 84, 6);
+    width: 100vw;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;    
+    position: fixed;
+    bottom: 1px;
+    font-size: small;
+}
 
+.about-container:hover {
+    background-color: rgb(227, 149, 6);
+}
 
 
 @media screen and (max-width: 420px) {
@@ -163,6 +168,7 @@ body {
         gap: 0vw;
         font-size: small;
         flex-direction: column;
+        justify-content: center;
     }
     .main {
     flex-direction: column;
@@ -175,13 +181,17 @@ body {
     gap: 0px;
     font-size: small;
     padding: 10px 0px 10px 0px;
+    margin-right: 0px;
     }
     .carousel {
-        height: 200px;
+        height: 350px;
         width: 95vw;
         float: none;
         margin-top: 10px;
     }  
+    .logo-bottom {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 920px) and (min-width: 421px) {
@@ -206,6 +216,7 @@ body {
         gap: 0vw;
         font-size: small;
         flex-direction: column;
+        justify-content: center;
     }
     .main {
         flex-direction: column;
@@ -218,12 +229,15 @@ body {
         gap: 0px;
         font-size: large;
         padding: 10px 0px 10px 0px;
+        margin-right: 0px;
     } 
     .carousel {
-        height: 200px;
+        height: 400px;
         width: 95vw;
         float: none;
         margin-top: 10px;
     }  
-    
+    .logo-bottom {
+        display: none;
+    }
   }
