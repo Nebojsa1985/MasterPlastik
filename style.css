@@ -64,14 +64,14 @@ body {
 .content {
     background-color: black;
     height: 500px;
-    width: 60vw;
+    width: 40vw;
     float: left;
     display: flex;   
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;
     flex-direction: column;
     margin-right: 20px;
-    font-size: x-large;
+    font-size: large;
 }
 
 .content-home {
@@ -103,8 +103,8 @@ body {
 .carousel {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    height: 700px;
-    max-width: 700px;
+    height: 500px;
+    max-width: 500px;
     width: 40vw;
     float: right;
     margin-top: 10px;
@@ -171,17 +171,18 @@ body {
         justify-content: center;
     }
     .main {
-    flex-direction: column;
-    padding: 0px 0px 0 0px;
+        flex-direction: column;
+        padding: 0px 0px 0 0px;
     }
     .content {
-    height: fit-content;
-    width: 95vw;
-    float: none;
-    gap: 0px;
-    font-size: small;
-    padding: 10px 0px 10px 0px;
-    margin-right: 0px;
+        height: fit-content;
+        width: 95vw;
+        float: none;
+        gap: 0px;
+        font-size: small;
+        padding: 10px 0px 10px 0px;
+        margin-right: 0px;
+        align-items: center;
     }
     .carousel {
         height: 350px;
@@ -230,6 +231,7 @@ body {
         font-size: large;
         padding: 10px 0px 10px 0px;
         margin-right: 0px;
+        align-items: center;
     } 
     .carousel {
         height: 400px;
@@ -239,5 +241,17 @@ body {
     }  
     .logo-bottom {
         display: none;
+    }
+  }
+
+  @media screen and (min-width: 1700px) {
+    .content {
+        height: 700px;
+        font-size: x-large;
+    }
+    
+    .carousel {
+        height: 700px;
+        max-width: 700px;
     }
   }
